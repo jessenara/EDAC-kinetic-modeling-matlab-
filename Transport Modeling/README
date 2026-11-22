@@ -1,0 +1,11 @@
+# Electrochemical Mass-Transport Modeling
+
+This directory contains the MATLAB scripts used to derive and validate the core thermodynamic and mass-transport metrics for the continuous-flow E-DAC system.
+
+* Flow Rate.m: Derives the theoretical minimum volumetric flow rate (Q_min) of the anodic hydrogen feed by integrating the Ideal Gas Law with Faraday’s Law of Electrolysis. This script subsequently calculates the continuous anodic stoichiometric ratio (lambda), providing the mathematical proof that the system operates independently of mass-transport limitations.
+
+* Control_Volume.m: Determines the net gaseous control volume (V_gas) of the sealed polycarbonate headspace chamber (BioChamber 2000) by correcting the calibrated gross volume (V_chamber) for internal physical displacements. This establishes the exact batch accumulation boundary condition required to accurately model zero-order CO2 desorption kinetics while verifying that internal tubing displacement remains negligible (<0.2%).
+
+* FE.m: Evaluates the hydroxide generation Faradaic Efficiency (FE) across chronopotentiometric trials by coupling logarithmic pH-shift speciation with Faraday’s Law of Electrolysis. This quantifies charge-transfer selectivity and isolates parasitic losses caused by carbonate buffering and transmembrane ion crossover.
+
+* SEC.m: Computes the Specific Energy Consumption (SEC, in kJ/mol) by integrating electrical power (V_cell * I) normalized against molar CO2 generation rate. This provides a standardized thermodynamic metric to benchmark reactor energy efficiency against state-of-the-art pH-swing and E-DAC literature.
