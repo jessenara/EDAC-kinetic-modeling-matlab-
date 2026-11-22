@@ -13,7 +13,7 @@ deltan = zeros(1, num_trials); % Pre-allocate array [mol]
 FE = zeros(1, num_trials); % Pre-allocate array [%]
 %[text] 3\. FE Calculation
 for i = 1:num_trials %[output:group:19b4b290]
-    deltan(i) = (10^-(14-pH_f(i))-10^-(14-pH_i(i))).*V_catholyte %[output:3eabb134] %[output:63e1d718] %[output:0279f29f]
+    deltan(i) = (10^-(14-pH_f(i))-10^-(14-pH_i(i))).*V_catholyte; %[output:3eabb134] %[output:63e1d718] %[output:0279f29f]
     FE(i) = deltan(i).*(z*F)/(I(i).*t(i))*100;
 end %[output:group:19b4b290]
 %[text] 4\. Output
